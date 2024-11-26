@@ -1,11 +1,13 @@
 import sys
+import os
+import platform
 
 def zip(path):
-  #add code later
+  os.system(f'zip -r archive.zip {path}')
 
 def tarball(path):
-  #add code later
-
+  os.system(f'tar -czf archive.tar.gz {path}')
+  
 if __name__ == "__main__":
     if len(sys.argv) > 2:
       path = sys.argv[1]
